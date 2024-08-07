@@ -1,10 +1,8 @@
 #include <iostream>
-
-// std::string getUserInput() {
-
-// }
+#include "PhoneBook/PhoneBook.class.hpp"
 
 int main(void) {
+    PhoneBook phoneBook;
     std::string userInput;
 
     std::cout << "--- Phone Book ---" << std::endl;
@@ -15,8 +13,11 @@ int main(void) {
         if (userInput == "EXIT") {
             std::cout << "Exiting..." << std::endl;
             break;
+        } else if  (userInput == "ADD") {
+            phoneBook.addContact();
+        } else {
+            std::cout << "Invalid command! Please try again." << std::endl;
         }
-        std::cout << "You entered: " << userInput << std::endl;
     }
     return 0;
 }
