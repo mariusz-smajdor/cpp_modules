@@ -24,6 +24,7 @@ class	Contact {
 		void setLastname(std::string str);
 		void setNumber(std::string const str);
 		void setNickname(std::string const str);
+		void setDarkestSecret(std::string const str);
 };
 
 #endif

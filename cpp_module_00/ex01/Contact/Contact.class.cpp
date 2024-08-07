@@ -1,3 +1,6 @@
+#include <iostream>
+#include "Contact.class.hpp"
+
 // Constructor and destructor
 
 Contact::Contact(void) : _firstname(""),
@@ -36,22 +39,22 @@ void Contact::setDarkestSecret(std::string str) {
 
 // GETTERS
 
-std::string Contact::getFirstname(void) const {
+const std::string Contact::getFirstname(void) const {
     return this->_firstname;
 }
 
-std::string Contact::getLastname(void) const {
+const std::string Contact::getLastname(void) const {
     return this->_lastname;
 }
 
-std::string Contact::getNickname(void) const {
+const std::string Contact::getNickname(void) const {
    return this->_nickname;
 }
 
-std::string Contact::getNumber(void) const {
+const std::string Contact::getNumber(void) const {
     return this->_number;
 }
 
-std::string Contact::getDarkestSecret(void) const {
+const std::string Contact::getDarkestSecret(void) const {
     return this->_darkestSecret;
 }
