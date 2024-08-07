@@ -55,7 +55,7 @@ void PhoneBook::_displayContacts() const {
 
 void PhoneBook::addContact(void) {
     if (this->_index == 8) {
-        std::cout << "The contact list is full! Replacing the first contact..." << std::endl;
+        std::cout << "The contact list is full! Replacing the oldest contact..." << std::endl;
         this->_index = 0;
     }
 
