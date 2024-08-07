@@ -13,6 +13,32 @@ PhoneBook::~PhoneBook(void) {
 	return ;
 }
 
+/*	Private	*/
+
+int PhoneBook::_getContactsSize(void) const {
+    int i = 0;
+
+    while (i < 8 && this->_contactList[i].getFirstname() != "")
+        i++;
+    return i;
+}
+
+void PhoneBook::_displayContacts() const {
+	std::cout << "+----------+----------+----------+----------+" << std::endl;
+	std::cout << "|     index|first name| last name|  nickname|" << std::endl;
+	std::cout << "+----------+----------+----------+----------+" << std::endl;
+
+	for (int i = 0; i < this->_getContactsSize(); i++) {
+        std::cout << "|" << std::setw(10) << i << "|";
+        std::cout << std::setw(10) << this->_contactList[i].getFirstname() << "|";
+        std::cout << std::setw(10) << this->_contactList[i].getLastname() << "|";
+        std::cout << std::setw(10) << this->_contactList[i].getNickname() << "|" << std::endl;
+    }
+	std::cout << "+----------+----------+----------+----------+" << std::endl;
+}
+
+/* Public */
+
 void PhoneBook::addContact(void) {
     if (this->_index == 8) {
         std::cout << "The contact list is full! Replacing the first contact..." << std::endl;
@@ -42,3 +68,10 @@ void PhoneBook::addContact(void) {
     std::cout << this->_contactList[this->_index].getFirstname() << " was added to the contact list!" << std::endl;
     this->_index++;
 }
+
+void PhoneBook::searchContact(int index) {
+    (void)index;
+
+    this->_displayContacts();
+}
+
