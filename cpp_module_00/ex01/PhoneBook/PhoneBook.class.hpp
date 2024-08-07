@@ -16,7 +16,7 @@ class	PhoneBook {
 		~PhoneBook(void);
 
 		void addContact(void);
-		void searchContact(int index);
+		void searchContact(void);
 };
 
 #endif

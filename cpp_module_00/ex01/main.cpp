@@ -16,7 +16,7 @@ int main(void) {
         } else if  (userInput == "ADD") {
             phoneBook.addContact();
         } else if (userInput == "SEARCH") {
-            phoneBook.searchContact(0);
+            phoneBook.searchContact();
         } else {
             std::cout << "Invalid command! Please try again." << std::endl;
         }
