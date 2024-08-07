@@ -10,6 +10,7 @@ class	PhoneBook {
 		Contact	_contactList[8];
 
 		int _getContactsSize(void) const;
+		void _listFullContactInfo(int index);
 		void _displayContacts(void) const;
 	public:
 		PhoneBook(void);

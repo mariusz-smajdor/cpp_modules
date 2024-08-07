@@ -24,6 +24,14 @@ int PhoneBook::_getContactsSize(void) const {
     return i;
 }
 
+void PhoneBook::_listFullContactInfo(int index) {
+	std::cout << "First name: " << this->_contactList[index].getFirstname() << std::endl;
+	std::cout << "Last name: " << this->_contactList[index].getLastname() << std::endl;
+	std::cout << "Nickname: " << this->_contactList[index].getNickname() << std::endl;
+	std::cout << "Phone number: " << this->_contactList[index].getNumber() << std::endl;
+	std::cout << "Darkest secret: " << this->_contactList[index].getDarkestSecret() << std::endl;
+}
+
 void PhoneBook::_displayContacts() const {
 	std::cout << "+----------+----------+----------+----------+" << std::endl;
 	std::cout << "|     index|first name| last name|  nickname|" << std::endl;
@@ -90,5 +98,5 @@ void PhoneBook::searchContact() {
         }
         index = std::stoi(enteredIndex);
     } while (index < 0 || index >= this->_getContactsSize());
-    std::cout << "First name: " << this->_contactList[index].getFirstname() << std::endl;
+    this->_listFullContactInfo(index);
 }
