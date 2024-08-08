@@ -33,7 +33,15 @@ void PhoneBook::_listFullContactInfo(int index) {
 	std::cout << "Darkest secret: " << this->_contactList[index].getDarkestSecret() << std::endl;
 }
 
-void PhoneBook::_displayContacts() const {
+std::string PhoneBook::_truncateString(std::string str) {
+	if (str.length() > 10) {
+		str = str.substr(0, 9);
+		str += ".";
+	}
+	return str;
+}
+
+void PhoneBook::_displayContacts() {
 	std::cout << "+----------+----------+----------+----------+" << std::endl;
 	std::cout << "|     index|first name| last name|  nickname|" << std::endl;
 	std::cout << "+----------+----------+----------+----------+" << std::endl;
@@ -43,11 +51,18 @@ void PhoneBook::_displayContacts() const {
         return ;
     }
 
+
 	for (int i = 0; i < this->_getContactsSize(); i++) {
+		std::string firstname, lastname, nickname;
+
+		firstname = this->_truncateString(this->_contactList[i].getFirstname());
+		lastname = this->_truncateString(this->_contactList[i].getLastname());
+		nickname = this->_truncateString(this->_contactList[i].getNickname());
+
         std::cout << "|" << std::setw(10) << i << "|";
-        std::cout << std::setw(10) << this->_contactList[i].getFirstname() << "|";
-        std::cout << std::setw(10) << this->_contactList[i].getLastname() << "|";
-        std::cout << std::setw(10) << this->_contactList[i].getNickname() << "|" << std::endl;
+        std::cout << std::setw(10) << firstname << "|";
+        std::cout << std::setw(10) << lastname << "|";
+        std::cout << std::setw(10) << nickname << "|" << std::endl;
     }
 	std::cout << "+----------+----------+----------+----------+" << std::endl;
 }
