@@ -12,6 +12,9 @@ class	PhoneBook {
 		int _getContactsSize(void) const;
 		void _listFullContactInfo(int index);
 		void _displayContacts(void) const;
+		std::string _processInput(std::string input, bool isNumber, bool isName);
+		std::string _trim(std::string str);
+		
 	public:
 		PhoneBook(void);
 		~PhoneBook(void);
