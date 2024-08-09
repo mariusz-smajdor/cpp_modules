@@ -1,13 +1,14 @@
 #include "Zombie.hpp"
-// Constructors
 
-Zommbie::Zombie(std::string name) : _name(name) {}
+// Constructor
+Zombie::Zombie(const std::string& name) : _name(name) {}
 
-~Zombie::Zombie() {
-	std::cout << _name << " is destroyed" << std::endl;
+// Destructor
+Zombie::~Zombie() {
+    std::cout << _name << " is destroyed" << std::endl;
 }
 
-void announce() const {
-    std::cout << _name << " BraiiiiiiinnnzzzZ..." << std::endl;
+// Member function
+void Zombie::announce() const {
+    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
-
