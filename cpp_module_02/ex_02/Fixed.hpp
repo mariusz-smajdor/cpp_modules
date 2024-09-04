@@ -8,6 +8,7 @@ private:
 
 public:
 	Fixed();
+	Fixed(const Fixed& other);
 
 	int getRawBits(void) const;
 	void setRawBits(const int raw);
@@ -17,6 +18,9 @@ public:
 	bool operator<=(const Fixed& other) const;
 	bool operator==(const Fixed& other) const;
 	bool operator!=(const Fixed& other) const;
+
+	// The 4 arithmetic operators: +, -, *, and /.
+	Fixed operator+(const Fixed& other) const;
 
 };
 

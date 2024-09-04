@@ -5,12 +5,11 @@ int main() {
     Fixed b;
 
     b.setRawBits(11);
+
+    Fixed c = a + b;
+
     std::cout << a << std::endl;
-    std::cout << (a < b) << std::endl;
-    std::cout << (a > b) << std::endl;
-    std::cout << (a <= b) << std::endl;
-    std::cout << (a <= b) << std::endl;
-    std::cout << (a == b) << std::endl;
-    std::cout << (a != b) << std::endl;
+    std::cout << c << std::endl;
+
     return 0;
 }
