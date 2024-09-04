@@ -22,6 +22,10 @@ bool Fixed::operator>(const Fixed& other) const {
     return _value > other._value;
 }
 
+bool Fixed::operator<(const Fixed& other) const {
+    return _value < other._value;
+}
+
 std::ostream& operator<<(std::ostream& out, const Fixed& fixed) {
     out << fixed.getRawBits();
     return out;
