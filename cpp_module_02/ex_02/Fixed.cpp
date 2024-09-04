@@ -8,8 +8,12 @@ Fixed::Fixed(void) : _value(0) {
 
 // Setters and getters
 
-int Fixed::getValue() const {
+int Fixed::getRawBits() const {
     return _value;
+}
+
+void Fixed::setRawBits(const int raw) {
+    _value = raw;
 }
 
 // Operator overload functions
@@ -19,6 +23,6 @@ bool Fixed::operator>(const Fixed& other) const {
 }
 
 std::ostream& operator<<(std::ostream& out, const Fixed& fixed) {
-    out << fixed.getValue();
+    out << fixed.getRawBits();
     return out;
 }

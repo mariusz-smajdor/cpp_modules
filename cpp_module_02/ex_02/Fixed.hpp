@@ -9,7 +9,8 @@ private:
 public:
 	Fixed();
 
-	int getValue() const;
+	int getRawBits(void) const;
+	void setRawBits(const int raw);
 	bool operator>(const Fixed& other) const;
 };
 
