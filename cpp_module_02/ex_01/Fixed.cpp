@@ -48,4 +48,3 @@ float Fixed::toFloat(void) const {
 int Fixed::toInt(void) const {
 	return _value >> _fractBits;
 }
-// 12 1100 00000000
