@@ -8,7 +8,9 @@ int main() {
 
     Fixed c = a + b;
 
+    std::cout << a++ << std::endl;
     std::cout << a << std::endl;
+    std::cout << ++(++a) << std::endl;
     std::cout << c << std::endl;
 
     return 0;

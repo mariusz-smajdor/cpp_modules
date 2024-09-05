@@ -12,6 +12,7 @@ public:
 
 	int getRawBits(void) const;
 	void setRawBits(const int raw);
+
 	bool operator>(const Fixed& other) const;
 	bool operator<(const Fixed& other) const;
 	bool operator>=(const Fixed& other) const;
@@ -19,8 +20,15 @@ public:
 	bool operator==(const Fixed& other) const;
 	bool operator!=(const Fixed& other) const;
 
-	// The 4 arithmetic operators: +, -, *, and /.
 	Fixed operator+(const Fixed& other) const;
+	Fixed operator-(const Fixed& other) const;
+	Fixed operator*(const Fixed& other) const;
+	Fixed operator/(const Fixed& other) const;
+
+	Fixed& operator++(void);
+	Fixed& operator--(void);
+	Fixed operator++(int);
+	Fixed operator--(int);
 
 };
 
