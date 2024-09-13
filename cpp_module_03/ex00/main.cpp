@@ -5,7 +5,9 @@ int main() {
     Super.attack("Maciej debil");
     Super.takeDamage(4);
     Super.takeDamage(4);
+    Super.beRepaired(4);
     Super.takeDamage(4);
     Super.takeDamage(4);
+    Super.beRepaired(4);
     return 0;
 }

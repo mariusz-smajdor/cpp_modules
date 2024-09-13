@@ -21,7 +21,7 @@ ClapTrap::~ClapTrap(void) {
 // Member functions
 
 void ClapTrap::attack(const std::string& target) {
-    if (_hitPoints == 0 || _energyPoints == 0) {
+    if (_hitPoints <= 0 || _energyPoints == 0) {
         std::cout << "ClapTrap " << _name << " is unable to attack!" << std::endl;
         return ;
     }
@@ -43,4 +43,16 @@ void ClapTrap::takeDamage(unsigned int amount) {
     if (_hitPoints <= 0) {
         std::cout << "ClapTrap " << _name << " died!" << std::endl;
     }
+}
+
+void ClapTrap::beRepaired(unsigned int amount) {
+    if (_hitPoints <= 0 || _energyPoints == 0) {
+        std::cout << "ClapTrap " << _name << " is unable to repair!" << std::endl;
+        return ;
+    }
+    _energyPoints--;
+    _hitPoints += amount;
+    std::cout << "ClapTrap " << _name << " repairs himself gaining "
+          << amount << " points of health!\n" 
+          << "Current health: " << _hitPoints <<  std::endl;
 }
