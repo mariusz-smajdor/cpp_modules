@@ -1,5 +1,7 @@
 #include <iostream>
 
+#pragma once
+
 class ClapTrap {
 
 private:
@@ -11,6 +13,8 @@ private:
 public:
 	ClapTrap(std::string name);
 	~ClapTrap(void);
+
+	std::string getName(void) const;
 
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);

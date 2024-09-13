@@ -1,8 +1,3 @@
-// 	std::string _name;
-// 	int hitPoints = 10;
-// 	int energyPoints = 10;
-// 	int attackDamage = 0;
-
 #include "ClapTrap.hpp"
 
 // Constructor and Destructor
@@ -16,6 +11,12 @@ ClapTrap::ClapTrap(std::string name) : _name(name),
 
 ClapTrap::~ClapTrap(void) {
     std::cout << _name << " was destroyed!" << std::endl;
+}
+
+// Getters and setters
+
+std::string ClapTrap::getName(void) const {
+    return _name;
 }
 
 // Member functions
