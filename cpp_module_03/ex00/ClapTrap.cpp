@@ -7,16 +7,27 @@
 
 // Constructor and Destructor
 
-ClapTrap::ClapTrap(std::string name) : _name(name) {
+ClapTrap::ClapTrap(std::string name) : _name(name),
+                                       _hitPoints(10),
+                                       _energyPoints(10),
+                                       _attackDamage(0) {
     std::cout << name << " was created!" << std::endl; 
 }
 
 ClapTrap::~ClapTrap(void) {
-    std::cout << this->getName() << " was destroyed!" << std::endl;
+    std::cout << _name << " was destroyed!" << std::endl;
 }
 
-// Getters and setters
+// Member functions
 
-std::string ClapTrap::getName(void) const {
-    return this->_name;
+void ClapTrap::attack(const std::string& target) {
+    if (_hitPoints == 0 || _energyPoints == 0) {
+        std::cout << "ClapTrap " << _name << " is unable to attack!" << std::endl; 
+    }
+
+    _energyPoints--;
+
+    std::cout << "ClapTrap " << _name << " attacks "
+              << target << ", causing " << _attackDamage
+              << " points of damage!" << std::endl;
 }
