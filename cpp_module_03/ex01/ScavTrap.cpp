@@ -5,5 +5,5 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 }
 
 ScavTrap::~ScavTrap(void) {
-    std::cout << getName() << " was destroyed!" << std::endl;
+    std::cout << "ScavTrap " << getName() << " was destroyed!" << std::endl;
 }

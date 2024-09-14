@@ -10,7 +10,7 @@ ClapTrap::ClapTrap(std::string name) : _name(name),
 }
 
 ClapTrap::~ClapTrap(void) {
-    std::cout << _name << " was destroyed!" << std::endl;
+    std::cout << "ClapTrap " << _name << " was destroyed!" << std::endl;
 }
 
 // Getters and setters
