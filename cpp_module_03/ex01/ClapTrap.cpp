@@ -31,7 +31,7 @@ int ClapTrap::getAttackDamage(void) const {
     return _attackDamage;
 }
 
-void ClapTrap::setEnergyPoints(int amount) const {
+void ClapTrap::setEnergyPoints(int amount) {
     _energyPoints = amount;
 }
 
