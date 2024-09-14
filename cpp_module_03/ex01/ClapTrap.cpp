@@ -3,9 +3,9 @@
 // Constructor and Destructor
 
 ClapTrap::ClapTrap(std::string name) : _name(name),
-                                       _hitPoints(100),
-                                       _energyPoints(50),
-                                       _attackDamage(20) {
+                                       _hitPoints(10),
+                                       _energyPoints(10),
+                                       _attackDamage(0) {
     std::cout << name << " was created!" << std::endl; 
 }
 
@@ -31,8 +31,16 @@ int ClapTrap::getAttackDamage(void) const {
     return _attackDamage;
 }
 
+void ClapTrap::setHitPoints(int amount) {
+    _hitPoints = amount;
+}
+
 void ClapTrap::setEnergyPoints(int amount) {
     _energyPoints = amount;
+}
+
+void ClapTrap::setAttackDamage(int amount) {
+    _attackDamage = amount;
 }
 
 // Member functions
