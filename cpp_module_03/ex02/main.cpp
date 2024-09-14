@@ -15,5 +15,13 @@ int main() {
     Super2.takeDamage(3);
     Super2.beRepaired(2);
     Super2.highFivesGuys();
+
+    std::cout << "\n\n\n";
+    ScavTrap Scav("Scav");
+    std::cout << "\n" << Scav.getHitPoints() << "\n" << Scav.getEneryPoints() << "\n" << Scav.getAttackDamage() << std::endl;
+    
+    std::cout << "\n";
+    FragTrap Frag("Frag");
+    std::cout << "\n" << Frag.getHitPoints() << "\n" << Frag.getEneryPoints() << "\n" << Frag.getAttackDamage() << std::endl;
     return 0;
 }

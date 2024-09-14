@@ -2,6 +2,9 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
     std::cout << "ScavTrap " << name << " was created!" << std::endl;
+    setHitPoints(100);
+    setEnergyPoints(50);
+    setAttackDamage(20);
 }
 
 ScavTrap::~ScavTrap(void) {
