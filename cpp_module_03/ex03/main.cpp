@@ -1,19 +1,12 @@
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main() {
-    ScavTrap Super("Super");
-    Super.attack("Maciej Debil");
-    Super.takeDamage(4);
-    Super.beRepaired(1);
-    Super.guardGate();
+    DiamondTrap Super("Super");
 
-    std::cout << "\n\n\n";
-
-    FragTrap Super2("Super2");
-    Super2.attack("Maciej 🤡");
-    Super2.takeDamage(3);
-    Super2.beRepaired(2);
-    Super2.highFivesGuys();
+    std::cout << "\n" << Super.getHitPoints() << "\n" << Super.getEneryPoints() << "\n" << Super.getAttackDamage() << std::endl;
+    
+    ScavTrap Scav("Scav");
+    std::cout << "\n" << Scav.getHitPoints() << "\n" << Scav.getEneryPoints() << "\n" << Scav.getAttackDamage() << std::endl;
+    
     return 0;
 }

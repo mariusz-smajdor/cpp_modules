@@ -2,6 +2,9 @@
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name) {
     std::cout << "FragTrap " << name << " was created!" << std::endl;
+    _hitPoints = 100;
+	_energyPoints = 100;
+	_attackDamage = 30;
 }
 
 FragTrap::~FragTrap(void) {
