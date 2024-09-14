@@ -19,6 +19,14 @@ std::string ClapTrap::getName(void) const {
     return _name;
 }
 
+int getHitPoints(void) const {
+    return _hitPoints;
+}
+
+int getEneryPoints(void) const {
+    return _energyPoints;
+}
+
 // Member functions
 
 void ClapTrap::attack(const std::string& target) {
