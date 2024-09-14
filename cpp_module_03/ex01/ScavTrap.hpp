@@ -9,5 +9,6 @@ public:
     ~ScavTrap(void);
 
 	void attack(const std::string& target);
+    void guardGate(void);
 
 };
