@@ -4,8 +4,8 @@
 
 ClapTrap::ClapTrap(std::string name) : _name(name),
                                        _hitPoints(100),
-                                       _energyPoints(50),
-                                       _attackDamage(20) {
+                                       _energyPoints(100),
+                                       _attackDamage(30) {
     std::cout << name << " was created!" << std::endl; 
 }
 
