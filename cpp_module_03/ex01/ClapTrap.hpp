@@ -18,7 +18,7 @@ public:
 	int getHitPoints(void) const;
 	int getEneryPoints(void) const;
 	int getAttackDamage(void) const;
-	void setEnergyPoints(int amount) const;
+	void setEnergyPoints(int amount);
 
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
