@@ -19,12 +19,20 @@ std::string ClapTrap::getName(void) const {
     return _name;
 }
 
-int getHitPoints(void) const {
+int ClapTrap::getHitPoints(void) const {
     return _hitPoints;
 }
 
-int getEneryPoints(void) const {
+int ClapTrap::getEneryPoints(void) const {
     return _energyPoints;
+}
+
+int ClapTrap::getAttackDamage(void) const {
+    return _attackDamage;
+}
+
+void ClapTrap::setEnergyPoints(int amount) const {
+    _energyPoints = amount;
 }
 
 // Member functions
