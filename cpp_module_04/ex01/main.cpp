@@ -3,8 +3,7 @@
 
 #define N_ANIMALS 10
 
-int main(void)
-{
+int main(void) {
 	{
 		const Animal *lotsOfAnimals[N_ANIMALS];
 
