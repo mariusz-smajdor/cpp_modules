@@ -1,9 +1,8 @@
-#ifndef RPN_CLASS_H
-# define RPN_CLASS_H
+#pragma once
 
-# include <string>
-# include <list>
-# include <iostream>
+#include <string>
+#include <list>
+#include <iostream>
 
 class RPN {
     public:
@@ -29,5 +28,3 @@ class RPN {
                 virtual const char* what() const throw();
         };
 };
-
-#endif
