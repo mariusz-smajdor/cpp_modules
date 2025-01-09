@@ -23,6 +23,7 @@ This repository is divided into several modules, each covering a specific topic:
 7. **Module 06**: C++ casts.
 8. **Module 07**: Templates.
 9. **Module 08**: Templated containers, iterators, and algorithms.
+10. **Module 09**: Understanding the STL (Standard Template Library) and advanced C++ algorithms.
 
 Each module is located in its own directory and contains a README explaining the module's objectives, the tasks, and how to compile and run the exercises.
 
@@ -32,8 +33,8 @@ To compile and run the examples provided in these modules, you'll need a C++ com
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/yourusername/42-cpp-modules.git
-    cd 42-cpp-modules
+    git clone https://github.com/mariusz-smajdor/cpp_modules.git
+    cd cpp_modules
     ```
 
 2. **Navigate to the module:**
